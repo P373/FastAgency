@@ -78,6 +78,11 @@
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  background-image: url('pexels-binyamin-mellish-186077.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .cover-container {
@@ -108,15 +113,38 @@ body {
   border-bottom-color: #fff;
 }
 
+.relative {position: relative;}
+
+.hero { 
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url('');*/
+    background-size: cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.7);
+  }
+
     </style>
 
   </head>
 <body class="d-flex h-100 text-center text-bg-dark">
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="hero">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column relative">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0"><img src ="fast-agency.png" / width="35px" height="35px"> FastAgency</h3>
+      <h3 class="float-md-start mb-0 relative"><img src ="fast-agency.png" / width="35px" height="35px"> FastAgency</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
         <a class="nav-link fw-bold py-1 px-0" href="#">Products</a>
@@ -136,7 +164,7 @@ body {
   <footer class="mt-auto text-white-50">
     <p>&copy; 2022 <a href="https://www.fastagency.net" class="text-white">FastAgency</a></p>
   </footer>
-</div>
+</div></div>
 
 
     
